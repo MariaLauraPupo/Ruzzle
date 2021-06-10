@@ -15,8 +15,10 @@ import javafx.beans.property.StringProperty;
  */
 public class Board {
 	private List<Pos> positions;
-	private Map<Pos, StringProperty> cells;
-
+	private Map<Pos, StringProperty> cells; /*=> StringPrperty perfettono di fare in modo che il bottone 
+                                              dell'interfacia grafica sia direttamente collegato ad una determinata StringProperty
+                                              evito di dover fare setText() ogni volta
+                                              Nella classe FXML devo mettere il BINDING*/
 	private int size;
 
 	/**

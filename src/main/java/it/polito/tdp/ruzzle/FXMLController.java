@@ -91,6 +91,7 @@ public class FXMLController {
 
     @FXML
     void handleProva(ActionEvent event) {
+    	//non controlla che la parola sia una parola esistente => da aggiungere
     	
     	//refresh interfaccia grafica
     	for(Button b : letters.values()) {
@@ -124,6 +125,10 @@ public class FXMLController {
     @FXML
     void handleReset(ActionEvent event) {
     	model.reset();
+    	for(Button b : letters.values()) {
+    		b.setDefaultButton(false);
+    	}
+    	txtResult.clear();
     }
     
     @FXML
